@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,8 +10,32 @@
   <body>
     <body>
       <h1>Document Object Model</h1>
-    <script>
-      // your code goes here
-    </script>
+  
+   <script>
+      function myFunction() {
+      var para = document.createElement("P");
+      para.innerText = "This is a paragraph.";
+      para.innerHTML = "I love <strong>Javascript</strong>"
+      document.body.appendChild(para);  //using appendChild to insert the p element 
+      var under_list = document.createElement("Ul");
+      var linked_list= document.createElement("LI");
+      linked_list.innerHTML = "Buy groceries";
+      var linked_list1 = document.createElement("LI");
+      linked_list1.innerHTML = "Feed the cat";
+      var linked_list2 = document.createElement("LI");
+      linked_list2.innerHTML = "Do laundry";
+       
+      //  linked_list.split(" ");
+      document.body.appendChild(linked_list);  //using appendChild to insert the p element 
+      document.body.appendChild(linked_list1);
+      document.body.appendChild(linked_list2);
+      document.body.removeChild(linked_list);// using to remove child elements.
+
+
+    }
+    // myFunction()
+      </script>
+    <button onclick=" myFunction()">touch me to see magic</button>    
+<div id="contentSectionID"></div>
   </body>
 </html>
