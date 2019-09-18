@@ -12,5 +12,23 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+    <script>
+      // let ul = document.getElementsByTagName("ul");
+      document.body.style.fontFamily="Arial , sans-serif";
+      document.getElementById("nickname").innerText = "Piyush";
+      document.getElementById("favorites").innerText = "Briyani";
+      document.getElementById("hometown").innerText = "Adra";
+      document.querySelectorAll("li").forEach(list =>{
+        list.className = "listitem"
+      });
+      document.querySelectorAll(".listitem").forEach(list =>{
+        list.style.color="red"
+      });
+      var image = document.createElement("img");
+      image.src = "https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png";
+      image.style.width = "120px";
+      document.body.append(image);
+
+    </script>
   </body>
 </html>
