@@ -23,6 +23,33 @@
         border: 1px solid #dedede;
       }
     </style>
+    <script>
+      function collect(){
+        var dem = document.getElementById("demo");
+        dem.style.border = "1px solid purple";
+        var dem1 = document.getElementsByClassName("demo");
+        // dem1.style.border.color = "1px solid orange" ;
+       for(var i = 0; i< dem1.length; i++){
+         dem1[i].style.border = "1px solid orange"
+       }
+       var tag = document.getElementsByTagName("article");
+      //  tag.style.border = "1px solid blue"
+         for (var i = 0; i < tag.length; i++) {
+          tag[i].style.border = "1px solid blue"
+        }
+        var query = document.querySelector("#demo-query ");
+            query.style.border = "1px solid blue";
+       var query1 = document.querySelectorAll(".demo-query-all");
+            // query1.style.border = "1px solid green";
+        for (var i = 0; i < query1.length; i++) {
+          query1[i].style.border = "1px solid green"
+        }
+      }
+    </script>
+    <br>
+    <br>
+    <button onclick="collect()">Click me to see magic</button>
+
   </head>
 
   <body>
