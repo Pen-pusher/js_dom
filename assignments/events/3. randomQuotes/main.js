@@ -1,9 +1,4 @@
 var quotes;
-
-// Write your code here
-
-
-
 quotes = [
     {
         "quoteAuthor": "Thomas Edison",
@@ -314,3 +309,17 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+// Write your code here
+function randomTrivia() {
+    var oddTrivia = Math.round(Math.random()*(quotes.length));
+    document.getElementById("para").innerHTML = quotes[oddTrivia].quoteAuthor;
+    document.getElementById("par").innerHTML = quotes[oddTrivia].quoteText;
+
+
+    // console.log(randomTrivia[oddTrivia])
+
+
+}
+
+document.addEventListener('keydown',randomTrivia)
+
